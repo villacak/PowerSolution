@@ -1,6 +1,5 @@
 package com.excercise.power;
 
-import com.excercise.power.recursive.BasePowerHalf;
 import com.excercise.power.recursive.BaseToPower;
 import com.excercise.power.recursive.AbstractBaseToPower;
 import com.excercise.power.recursive.BaseToPowerOptmized;
@@ -14,7 +13,7 @@ public class Main {
 
         final double TEMP_BASE = 2D;
         final int FIRST_CASE_POWER = 3;
-        final int SECOND_CASE_POWER = 20;
+        final int SECOND_CASE_POWER = 10;
 
         AbstractBaseToPower btp = new BaseToPower();
 
@@ -27,17 +26,6 @@ public class Main {
 
         final double secondResult = btp.baseToPower(TEMP_BASE, SECOND_CASE_POWER);
         System.out.println("Base= 2, power = 8, result " + secondResult + "\n");
-
-        //
-        // Second way looping O(N/2), where N is the power value
-        //
-        System.out.println("Dividing the power by 2 and recursive");
-        btp = new BasePowerHalf();
-        final double thirdResult = btp.baseToPower(TEMP_BASE, FIRST_CASE_POWER);
-        System.out.println("Base= 2, power = 3, result " + thirdResult);
-
-        final double fourthResult = btp.baseToPower(TEMP_BASE, SECOND_CASE_POWER);
-        System.out.println("Base= 2, power = 8, result " + fourthResult + "\n");
 
         //
         // Last Option, more optimized
