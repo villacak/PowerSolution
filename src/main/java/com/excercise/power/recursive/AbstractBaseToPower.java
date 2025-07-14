@@ -2,9 +2,9 @@ package com.excercise.power.recursive;
 
 import java.math.BigInteger;
 
-public abstract class IBaseToPower {
+public abstract class AbstractBaseToPower {
 
-    double resultToReturn = 1D;
+    double resultToReturn;
 
-    public abstract BigInteger baseToPower(double base, int power);
+    public abstract double baseToPower(double base, int power);
 }
